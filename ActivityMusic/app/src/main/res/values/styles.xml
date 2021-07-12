@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="Text_MyTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">28dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.AppCompat.NoActionBar" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

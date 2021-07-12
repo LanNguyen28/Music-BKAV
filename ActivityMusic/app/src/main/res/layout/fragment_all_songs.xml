@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllSongsFragment">
+    android:background="@color/white"
+    android:orientation="horizontal">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerV_Song"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_above="@id/bottom_relativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="-932dp">
 
-</FrameLayout>
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_500"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img_bottomImg"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="5dp" />
+
+
+        <LinearLayout
+            android:id="@+id/TV_LayoutDetal"
+            android:layout_width="300dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_toRightOf="@id/img_bottomImg"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="2dp">
+
+            <TextView
+                android:id="@+id/textV_bottom_songName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textV_bottom_songAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Img_pause"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/TV_LayoutDetal"
+            android:src="@drawable/ic_action_subpause"
+            android:visibility="invisible"></ImageView>
+
+        <ImageView
+            android:id="@+id/Img_dispause"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/TV_LayoutDetal"
+            android:src="@drawable/ic_action_dispause"
+            android:visibility="visible"></ImageView>
+    </RelativeLayout>
+</RelativeLayout>

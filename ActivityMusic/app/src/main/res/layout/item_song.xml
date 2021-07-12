@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="67dp">
+
+    <TextView
+        android:id="@+id/textV_IDsong"
+        android:paddingLeft="10dp"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        />
+    <ImageView
+        android:id="@+id/Img_Song"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_action_playmusic"
+
+        >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/TextV_Layout"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/textV_IDsong">
+
+        <TextView
+            android:id="@+id/textV_Timesong"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textV_Namesong"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Img_Song_Select"
+        android:layout_width="81dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/TextV_Layout"
+        android:src="@drawable/ic_action_select"></ImageView>
+
+</RelativeLayout>
