@@ -16,24 +16,19 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements IIClickItem {
 
     private RecyclerView mRcvSongList;
-    private ArrayList<SongItem> mSongItems ;
+    private ArrayList<SongItem.Song> mSongItems ;
     private SongItemAdapter mSongItemAdapter ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-
-    private void createSongList(){
-        mSongItems.add(new SongItem("Em là ai","hii","hiii"));
-        mSongItems.add(new SongItem("Từng quên đi","hieeii","hee"));
+        init();
     }
 
 
     public void init(){
         mSongItems = new ArrayList<>();
-       // createSongList();
         mRcvSongList = findViewById(R.id.recyclerV_Song);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRcvSongList.setLayoutManager(linearLayoutManager);
