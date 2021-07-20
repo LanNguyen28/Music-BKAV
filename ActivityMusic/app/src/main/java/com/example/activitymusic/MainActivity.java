@@ -1,11 +1,17 @@
 package com.example.activitymusic;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.activitymusic.AdapterSong.SongItemAdapter;
 import com.example.activitymusic.Interface.IIClickItem;
@@ -13,7 +19,7 @@ import com.example.activitymusic.Model.SongItem;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements IIClickItem {
+public class MainActivity extends AppCompatActivity implements IIClickItems {
 
     private RecyclerView mRcvSongList;
     private ArrayList<SongItem> mSongItems ;
@@ -23,21 +29,33 @@ public class MainActivity extends AppCompatActivity implements IIClickItem {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
     }
 
-    private void createSongList(){
-        mSongItems.add(new SongItem("Em là ai","hii","hiii"));
-        mSongItems.add(new SongItem("Từng quên đi","hieeii","hee"));
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                Toast.makeText(this, "hiii", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
     public void init(){
         mSongItems = new ArrayList<>();
-       // createSongList();
         mRcvSongList = findViewById(R.id.recyclerV_Song);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRcvSongList.setLayoutManager(linearLayoutManager);
-        mSongItemAdapter = new SongItemAdapter(mSongItems, this, this);
+        mSongItemAdapter = new SongItemAdapter(mSongItems, this);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,
                 DividerItemDecoration.VERTICAL);
         mRcvSongList.addItemDecoration(itemDecoration);
@@ -45,7 +63,12 @@ public class MainActivity extends AppCompatActivity implements IIClickItem {
     }
 
     @Override
-    public void ItemClick() {
+    public void onItemClick(SongItem song, int pos) {
+
+    }
+
+    @Override
+    public void onSongBtnClickListener(ImageButton btn, View v, SongItem song, int pos) {
 
     }
 }

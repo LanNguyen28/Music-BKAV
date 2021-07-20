@@ -24,8 +24,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Admin\AppData\Local\Temp\baseline_skip_previous_24.xml" />
-                                                <entry key="opacityPercent" value="80" />
+                                                <entry key="imagePath" value="/tmp/baseline_thumb_up_alt_24.xml" />
+                                                <entry key="opacityPercent" value="60" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -36,7 +36,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/skip_previous/baseline_skip_previous_24.xml" />
+                                                <entry key="url" value="jar:file:/snap/android-studio/113/android-studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/thumb_up_alt/baseline_thumb_up_alt_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -68,8 +68,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_action_skipprovious" />
-                                      <entry key="theme" value="HOLO_DARK" />
+                                      <entry key="outputName" value="ic_action_likeup" />
+                                      <entry key="themeColor" value="fff2f2" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -85,7 +85,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="C:\Users\Admin\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -140,7 +140,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Admin\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -184,7 +184,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Admin\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -248,7 +248,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="C:\Users\Admin\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -305,6 +305,11 @@
                 </map>
               </option>
             </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState />
           </value>
         </entry>
       </map>

@@ -1701,12 +1701,17 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_action_dislike
 drawable ic_action_dispause
 drawable ic_action_favorites
+drawable ic_action_like
+drawable ic_action_likeup
 drawable ic_action_musicicon
 drawable ic_action_playmusic
 drawable ic_action_repeat
+drawable ic_action_search
 drawable ic_action_select
+drawable ic_action_shuff
 drawable ic_action_skipnext
 drawable ic_action_skipprovious
 drawable ic_action_subpause
@@ -1759,10 +1764,9 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id ImgV_Media
 id Img_Song
 id Img_Song_Select
-id Img_dispause
-id Img_pause
 id META
 id NO_DEBUG
 id SHIFT
@@ -1773,6 +1777,8 @@ id SYM
 id TOP_END
 id TOP_START
 id TV_LayoutDetal
+id TV_songAuthormedia
+id TV_songName_media
 id TextV_Layout
 id accelerate
 id accessibility_action_clickable_span
@@ -1825,6 +1831,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_search
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1851,6 +1858,14 @@ id blocking
 id bottom
 id bottom_relativeLayout
 id bounce
+id btn_dislike_media
+id btn_like_media
+id btn_next_media
+id btn_play
+id btn_play_media
+id btn_pre_media
+id btn_selectMedia
+id btn_showList
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -1877,6 +1892,7 @@ id collapseActionView
 id confirm_button
 id container
 id content
+id contentAllSongs
 id contentPanel
 id contiguous
 id coordinator
@@ -1919,6 +1935,7 @@ id elastic
 id end
 id endToStart
 id end_padder
+id end_time
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -1956,6 +1973,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img_background
 id img_bottomImg
 id info
 id invisible
@@ -1966,6 +1984,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layout_time
 id left
 id leftToRight
 id line1
@@ -1973,6 +1992,7 @@ id line3
 id linear
 id listMode
 id list_item
+id ll_bottom
 id main_content
 id masked
 id material_clock_display
@@ -1995,6 +2015,8 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id media_actions
+id media_layout
+id media_seekBar
 id message
 id middle
 id mini
@@ -2057,6 +2079,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id play_time
 id position
 id postLayout
 id progress_circular
@@ -2269,6 +2292,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout app_bar_main
+layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2365,6 +2389,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu menu_search
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

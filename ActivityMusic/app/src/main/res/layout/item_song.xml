@@ -19,7 +19,6 @@
         android:layout_width="80dp"
         android:layout_height="match_parent"
         android:src="@drawable/ic_action_playmusic"
-
         >
     </ImageView>
 
@@ -41,7 +40,7 @@
 
         <TextView
             android:id="@+id/textV_Namesong"
-            android:layout_width="237dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@color/black"
@@ -49,11 +48,12 @@
 
     </LinearLayout>
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Img_Song_Select"
         android:layout_width="81dp"
         android:layout_height="match_parent"
         android:layout_toRightOf="@id/TextV_Layout"
-        android:src="@drawable/ic_action_select"></ImageView>
+        android:src="@drawable/ic_action_select">
+    </ImageButton>
 
 </RelativeLayout>
