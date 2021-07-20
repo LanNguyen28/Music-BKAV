@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements IIClickItems {
 
     private RecyclerView mRcvSongList;
-    private ArrayList<SongItem.Song> mSongItems ;
+    private ArrayList<SongItem> mSongItems ;
     private SongItemAdapter mSongItemAdapter ;
 
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements IIClickItems {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-<<<<<<< HEAD
+
     }
 
 
@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity implements IIClickItems {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-=======
->>>>>>> 0438f0a05ddeb8aa35d886070a850bc0590b0e85
     }
 
 
