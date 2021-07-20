@@ -24,8 +24,13 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+<<<<<<< HEAD
                                                 <entry key="imagePath" value="/tmp/baseline_thumb_up_alt_24.xml" />
                                                 <entry key="opacityPercent" value="60" />
+=======
+                                                <entry key="imagePath" value="C:\Users\Admin\AppData\Local\Temp\baseline_search_24.xml" />
+                                                <entry key="opacityPercent" value="80" />
+>>>>>>> 0438f0a05ddeb8aa35d886070a850bc0590b0e85
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -36,7 +41,11 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
+<<<<<<< HEAD
                                                 <entry key="url" value="jar:file:/snap/android-studio/113/android-studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/thumb_up_alt/baseline_thumb_up_alt_24.xml" />
+=======
+                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/search/baseline_search_24.xml" />
+>>>>>>> 0438f0a05ddeb8aa35d886070a850bc0590b0e85
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -68,8 +77,13 @@
                                   </option>
                                   <option name="values">
                                     <map>
+<<<<<<< HEAD
                                       <entry key="outputName" value="ic_action_likeup" />
                                       <entry key="themeColor" value="fff2f2" />
+=======
+                                      <entry key="outputName" value="ic_action_search" />
+                                      <entry key="theme" value="HOLO_DARK" />
+>>>>>>> 0438f0a05ddeb8aa35d886070a850bc0590b0e85
                                     </map>
                                   </option>
                                 </PersistentState>

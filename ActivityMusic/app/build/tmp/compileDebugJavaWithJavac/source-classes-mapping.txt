@@ -13,7 +13,13 @@ com/example/activitymusic/FragmentMusic/AllSongsFragment.java
  com.example.activitymusic.FragmentMusic.AllSongsFragment
 com/example/activitymusic/Model/SongItem.java
  com.example.activitymusic.Model.SongItem
+<<<<<<< HEAD
 com/example/activitymusic/FragmentMusic/MediaPlaybackFragment.java
  com.example.activitymusic.FragmentMusic.MediaPlaybackFragment
 com/example/activitymusic/IIClickItems.java
  com.example.activitymusic.IIClickItems
+=======
+ com.example.activitymusic.Model.SongItem$Song
+com/example/activitymusic/FragmentMusic/MediaPlaybackFragment.java
+ com.example.activitymusic.FragmentMusic.MediaPlaybackFragment
+>>>>>>> 0438f0a05ddeb8aa35d886070a850bc0590b0e85

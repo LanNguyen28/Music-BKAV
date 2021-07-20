@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Tue Jul 20 16:07:08 ICT 2021
 base.0=/home/lanntp/AndroidStudioProjects/Music-BKAV/ActivityMusic/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+=======
+#Mon Jul 12 16:43:05 ICT 2021
+base.0=D\:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+>>>>>>> 0438f0a05ddeb8aa35d886070a850bc0590b0e85
 renamed.0=classes.dex
 path.0=classes.dex
