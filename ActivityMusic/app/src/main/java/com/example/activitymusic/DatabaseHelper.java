@@ -1,2 +1,4 @@
-package com.example.activitymusic;public class DatabaseHelper {
+package com.example.activitymusic;
+
+public class DatabaseHelper {
 }

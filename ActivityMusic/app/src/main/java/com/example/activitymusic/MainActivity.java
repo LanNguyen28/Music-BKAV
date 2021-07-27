@@ -2,28 +2,32 @@ package com.example.activitymusic;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.Toast;
-
-import com.example.activitymusic.AdapterSong.SongItemAdapter;
-import com.example.activitymusic.Interface.IIClickItem;
-import com.example.activitymusic.Model.SongItem;
+import com.example.activitymusic.adapter.SongItemAdapter;
+import com.example.activitymusic.fragments.AllSongsFragment;
+import com.example.activitymusic.model.SongItem;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements IIClickItems {
+public class MainActivity extends AppCompatActivity  {
 
+    public static final int PERMISSION_READ = 0;
     private RecyclerView mRcvSongList;
-    private ArrayList<SongItem> mSongItems ;
-    private SongItemAdapter mSongItemAdapter ;
+    private ArrayList<SongItem> mSongItems;
+    private SongItemAdapter mSongItemAdapter;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +35,38 @@ public class MainActivity extends AppCompatActivity implements IIClickItems {
         setContentView(R.layout.activity_main);
         init();
 
+/*        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);*/
+
+        if (checkPermission()) {
+           // setAudio();
+        }
+
     }
 
+    public boolean checkPermission() {
+        int READ_EXTERNAL_PERMISSION = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        if((READ_EXTERNAL_PERMISSION != PackageManager.PERMISSION_GRANTED)) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_READ);
+            return false;
+        }
+        return true;
+    }
+
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case  PERMISSION_READ: {
+                if (grantResults.length > 0 && permissions[0].equals(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                        Toast.makeText(getApplicationContext(), "Please allow storage permission", Toast.LENGTH_LONG).show();
+                    } else {
+                       // setAudio();
+                    }
+                }
+            }
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -50,26 +84,24 @@ public class MainActivity extends AppCompatActivity implements IIClickItems {
         return super.onOptionsItemSelected(item);
     }
 
+//    public void setAudio() {
+//        mRcvSongList = findViewById(R.id.recyclerV_Song);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//        mRcvSongList.setLayoutManager(linearLayoutManager);
+//        mSongItemAdapter = new SongItemAdapter(mSongItems, this);
+//        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,
+//                DividerItemDecoration.VERTICAL);
+//        mRcvSongList.addItemDecoration(itemDecoration);
+//        mRcvSongList.setAdapter(mSongItemAdapter);
+//    }
 
-    public void init(){
+    public void init() {
         mSongItems = new ArrayList<>();
-        mRcvSongList = findViewById(R.id.recyclerV_Song);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        mRcvSongList.setLayoutManager(linearLayoutManager);
-        mSongItemAdapter = new SongItemAdapter(mSongItems, this);
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,
-                DividerItemDecoration.VERTICAL);
-        mRcvSongList.addItemDecoration(itemDecoration);
-        mRcvSongList.setAdapter(mSongItemAdapter);
-    }
 
-    @Override
-    public void onItemClick(SongItem song, int pos) {
-
-    }
-
-    @Override
-    public void onSongBtnClickListener(ImageButton btn, View v, SongItem song, int pos) {
-
+        FragmentManager manager = getSupportFragmentManager();
+        AllSongsFragment allSongsFragment = new AllSongsFragment();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.content, allSongsFragment);
+        fragmentTransaction.commit();
     }
 }

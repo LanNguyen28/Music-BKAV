@@ -11,9 +11,9 @@
         android:id="@+id/recyclerV_Song"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignWithParentIfMissing="true"
         android:layout_above="@id/bottom_relativeLayout"
         android:layout_alignParentTop="true"
-        android:layout_alignWithParentIfMissing="true"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="-932dp">
 
@@ -24,63 +24,75 @@
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/purple_500"
         android:orientation="horizontal"
+        android:background="@drawable/noactionlayout"
         android:padding="2dp"
-        android:visibility="visible">
+        android:visibility="gone">
 
-        <ImageView
-            android:id="@+id/img_bottomImg"
-            android:layout_width="60dp"
-            android:layout_height="65dp"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:padding="5dp" />
+        <LinearLayout
+            android:id="@+id/llImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_bottomImg"
+                android:layout_width="58dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_appmusic"
+                />
+
+        </LinearLayout>
 
 
         <LinearLayout
             android:id="@+id/TV_LayoutDetal"
-            android:layout_width="300dp"
-            android:layout_height="110dp"
+            android:layout_width="273dp"
+            android:layout_height="108dp"
             android:layout_marginEnd="1dp"
             android:layout_marginRight="1dp"
-            android:layout_toRightOf="@id/img_bottomImg"
+            android:layout_toRightOf="@id/llImg"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingLeft="2dp">
 
             <TextView
                 android:id="@+id/textV_bottom_songName"
-                android:layout_width="match_parent"
+                android:layout_width="275dp"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:text=""
+                android:text="hello"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textV_bottom_songAuthor"
-                android:layout_width="match_parent"
+                android:layout_width="282dp"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:text=""
+                android:text="mymy"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
         </LinearLayout>
 
-       <Button
-        android:id="@+id/btn_play"
-        android:layout_width="50dp"
-        android:layout_height="55dp"
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-19dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/TV_LayoutDetal"
+            android:background="@drawable/ic_action_subpause">
 
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:background="@drawable/ic_action_subpause">
-       </Button>
+        </Button>
 
 
     </RelativeLayout>

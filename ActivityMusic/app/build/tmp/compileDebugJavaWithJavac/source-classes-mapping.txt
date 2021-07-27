@@ -1,25 +1,28 @@
-com/example/activitymusic/AdapterSong/SongItemAdapter.java
- com.example.activitymusic.AdapterSong.SongItemAdapter
- com.example.activitymusic.AdapterSong.SongItemAdapter$ViewHolder
-com/example/activitymusic/MediaPlaybackService.java
- com.example.activitymusic.MediaPlaybackService
+com/example/activitymusic/service/SongMedia.java
+ com.example.activitymusic.service.SongMedia
+ com.example.activitymusic.service.SongMedia$1
+ com.example.activitymusic.service.SongMedia$2
+com/example/activitymusic/fragments/AllSongsFragment.java
+ com.example.activitymusic.fragments.AllSongsFragment
+com/example/activitymusic/interfaces/UIMediaUpdate.java
+ com.example.activitymusic.interfaces.UIMediaUpdate
 com/example/activitymusic/MainActivity.java
  com.example.activitymusic.MainActivity
-com/example/activitymusic/Interface/IIClickItem.java
- com.example.activitymusic.Interface.IIClickItem
+com/example/activitymusic/fragments/MediaPlaybackFragment.java
+ com.example.activitymusic.fragments.MediaPlaybackFragment
 com/example/activitymusic/BuildConfig.java
  com.example.activitymusic.BuildConfig
-com/example/activitymusic/FragmentMusic/AllSongsFragment.java
- com.example.activitymusic.FragmentMusic.AllSongsFragment
-com/example/activitymusic/Model/SongItem.java
- com.example.activitymusic.Model.SongItem
-<<<<<<< HEAD
-com/example/activitymusic/FragmentMusic/MediaPlaybackFragment.java
- com.example.activitymusic.FragmentMusic.MediaPlaybackFragment
-com/example/activitymusic/IIClickItems.java
- com.example.activitymusic.IIClickItems
-=======
- com.example.activitymusic.Model.SongItem$Song
-com/example/activitymusic/FragmentMusic/MediaPlaybackFragment.java
- com.example.activitymusic.FragmentMusic.MediaPlaybackFragment
->>>>>>> 0438f0a05ddeb8aa35d886070a850bc0590b0e85
+com/example/activitymusic/interfaces/IIClickItems.java
+ com.example.activitymusic.interfaces.IIClickItems
+com/example/activitymusic/adapter/SongItemAdapter.java
+ com.example.activitymusic.adapter.SongItemAdapter
+ com.example.activitymusic.adapter.SongItemAdapter$ViewHolder
+ com.example.activitymusic.adapter.SongItemAdapter$ViewHolder$1
+ com.example.activitymusic.adapter.SongItemAdapter$ViewHolder$2
+com/example/activitymusic/model/SongItem.java
+ com.example.activitymusic.model.SongItem
+com/example/activitymusic/DatabaseHelper.java
+ com.example.activitymusic.DatabaseHelper
+com/example/activitymusic/service/MediaPlaybackService.java
+ com.example.activitymusic.service.MediaPlaybackService
+ com.example.activitymusic.service.MediaPlaybackService$MusicBinder

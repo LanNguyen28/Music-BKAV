@@ -2,8 +2,12 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="67dp">
-
+    android:layout_height="67dp"
+    >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/LayoutClick">
     <TextView
         android:id="@+id/textV_IDsong"
         android:paddingLeft="10dp"
@@ -12,13 +16,15 @@
         android:gravity="center"
         android:text=""
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="16sp"
+
         />
     <ImageView
-        android:id="@+id/Img_Song"
+        android:id="@+id/ImgV_IDSong"
         android:layout_width="80dp"
         android:layout_height="match_parent"
         android:src="@drawable/ic_action_playmusic"
+        android:visibility="invisible"
         >
     </ImageView>
 
@@ -30,13 +36,6 @@
         android:orientation="vertical"
         android:layout_toRightOf="@id/textV_IDsong">
 
-        <TextView
-            android:id="@+id/textV_Timesong"
-            android:layout_width="237dp"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="@color/black"
-            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/textV_Namesong"
@@ -46,13 +45,23 @@
             android:textColor="@color/black"
             android:textSize="18sp" />
 
+        <TextView
+            android:id="@+id/textV_Timesong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
     </LinearLayout>
+</RelativeLayout>
 
     <ImageButton
-        android:id="@+id/Img_Song_Select"
+        android:id="@+id/Img_SongSelect"
         android:layout_width="81dp"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/TextV_Layout"
+        android:layout_toRightOf="@id/LayoutClick"
+        android:background="@color/white"
         android:src="@drawable/ic_action_select">
     </ImageButton>
 

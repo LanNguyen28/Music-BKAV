@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="nav_layout_vertical">16dp</dimen>
+    <dimen name="nav_layout_height">160dp</dimen>
+    <dimen name="activity_horizontal">16dp</dimen>
+    <dimen name="activity_vertical">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="seek_bar_thickness">4dp</dimen>
+    <dimen name="seek_bar_thumb_size">13dp</dimen>
+    <dimen name="item">10dp</dimen>
+</resources>
