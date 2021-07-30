@@ -32,7 +32,6 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
     }
 
 
-
     @Override
     public int getItemViewType(int position) {
         if (mSongItems.get(position).ismIsPlay()) return 1;
@@ -100,7 +99,10 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
             mLayoutClick.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mIiClickItems.onItemClick(songItem);
+//                    mSongID.setVisibility(View.INVISIBLE);
+//                    mImageID.setVisibility(View.VISIBLE);
+//                    mSongName.setTypeface(null, Typeface.BOLD);
+                    mIiClickItems.onItemClick(songItem,pos);
                 }
             });
             mSelectSong.setOnClickListener(new View.OnClickListener() {

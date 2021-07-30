@@ -1,9 +1,9 @@
+com/example/activitymusic/fragments/AllSongsFragment.java
+ com.example.activitymusic.fragments.AllSongsFragment
 com/example/activitymusic/service/SongMedia.java
  com.example.activitymusic.service.SongMedia
  com.example.activitymusic.service.SongMedia$1
  com.example.activitymusic.service.SongMedia$2
-com/example/activitymusic/fragments/AllSongsFragment.java
- com.example.activitymusic.fragments.AllSongsFragment
 com/example/activitymusic/interfaces/UIMediaUpdate.java
  com.example.activitymusic.interfaces.UIMediaUpdate
 com/example/activitymusic/MainActivity.java

@@ -1,6 +1,7 @@
 package com.example.activitymusic.fragments;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -23,6 +24,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.activitymusic.adapter.SongItemAdapter;
 import com.example.activitymusic.interfaces.IIClickItems;
@@ -44,7 +46,12 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     private Button mBtnPlay;
     private TextView mSongName, mSongAuthor;
     public MediaPlaybackService mMusicService;
-    public MediaPlayer mediaPlayer;
+    private SongMedia mSongMedia;
+    private int mPosCurrent;
+
+    public SongMedia getMedia() {
+        return mSongMedia;
+    }
 
     public AllSongsFragment() {
         // Required empty public constructor
@@ -53,6 +60,8 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //mSongMedia = new SongMedia(getContext());
+
     }
 
     @Override
@@ -62,21 +71,29 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         init(view);
         return view;
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
     private void init(final View view) {
         mSongItems = new ArrayList<>();
         // mediaPlayer = new MediaPlayer();
 
         getSong();
+        getDataBottom();
         mSongImg = view.findViewById(R.id.img_bottomImg);
         mRcvSong = view.findViewById(R.id.recyclerV_Song);
         mSongName = view.findViewById(R.id.textV_bottom_songName);
         mSongAuthor = view.findViewById(R.id.textV_bottom_songAuthor);
         mLlBottom = view.findViewById(R.id.bottom_relativeLayout);
         mBtnPlay = view.findViewById(R.id.btn_play);
-
-//        mLlBottom.setOnClickListener(this);
-//        mBtnPlay.setOnClickListener(this);
+        mLlBottom.setOnClickListener(this);
+        mBtnPlay.setOnClickListener(this);
 
 
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
@@ -85,8 +102,13 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         mSongAdapter = new SongItemAdapter(mSongItems, getActivity(),this);
         mRcvSong.setAdapter(mSongAdapter);
         mSongAdapter.notifyDataSetChanged();
-        mLlBottom.setVisibility(View.VISIBLE);
 
+        if(mSongMedia!=null){
+           mLlBottom.setVisibility(View.VISIBLE);
+       }
+//        if (!mSongMedia.isStatusPlay()) {
+//            mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+//        }
     }
 
     public void getSong() {
@@ -128,19 +150,55 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
 
     }
 
+    public void getDataBottom() {
+        if (mSongMedia != null && mSongMedia.getmCurrentPlay() >= 0) {
+            mLlBottom.setVisibility(View.VISIBLE);
+
+            if (mSongMedia.isStatusPlay()) {
+                mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+            }
+            else {
+                mBtnPlay.setBackgroundResource(R.drawable.ic_action_dispause);
+            }
+
+            for (int i = 0; i < mSongItems.size(); i++) {
+                mSongItems.get(i).setmIsPlay(false);
+            }
+            mSongItems.get(mSongMedia.getmCurrentPlay());
+        }
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_play: {
-                mBtnPlay.setBackgroundResource(R.drawable.ic_action_dispause);
+                if(mSongMedia.isStatusPlay()){
+                    mSongMedia.pauseSong();
+                    mBtnPlay.setBackgroundResource(R.drawable.ic_action_dispause);
+                    Toast.makeText(getActivity(), "pause", Toast.LENGTH_SHORT).show();
+
+                }
+                else{
+                    mSongMedia.resumeSong();
+                    mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+                    Toast.makeText(getActivity(), "play", Toast.LENGTH_SHORT).show();
+
+
+                }
                 break;
             }
             case R.id.bottom: {
+                mPosCurrent =mSongMedia.getmCurrentPlay();
+                SongItem mSongItem = mSongItems.get(mPosCurrent);
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                MediaPlaybackFragment mediaPlaybackFragment = MediaPlaybackFragment.newInstance(
+                        mSongItem.getmSongName(), mSongItem.getmSongAuthor(), mSongItem.getmSongImg(), mPosCurrent);
+                mediaPlaybackFragment.getActivity();
                 ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+                Log.d("LanNTp", "onClick: ");
                 break;
             }
             default: {
@@ -149,16 +207,24 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     }
 
     @Override
-    public void onItemClick(SongItem songItem) {
-//        for (int i = 0; i < mSongItems.size(); i++) {
-//            mSongItems.get(i).setmIsPlay(false);
-//        }
-//        mSongItems.get(pos).setmIsPlay(true);
+    public void onItemClick(SongItem songItem, int pos) {
+        for (int i = 0; i < mSongItems.size(); i++) {
+            mSongItems.get(i).setmIsPlay(false);
+        }
+        mSongItems.get(pos).setmIsPlay(true);
+
+        if(mSongMedia!=null){
+            mSongMedia.playSong(songItem.getmSongImg());
+            mSongMedia.setmCurrentPlay(pos);
+        }
         mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+
         mLlBottom.setVisibility(View.VISIBLE);
         Log.d("LanNTp", "onItemClick: "+mLlBottom);
         mSongName.setText(songItem.getmSongName());
         mSongAuthor.setText(songItem.getmSongAuthor());
+       // mPosCurrent = pos;
+
     }
 
     @Override
