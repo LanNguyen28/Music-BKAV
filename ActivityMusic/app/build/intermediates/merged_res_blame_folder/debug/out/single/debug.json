@@ -1,382 +1,382 @@
 [
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_subpause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_subpause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_dispause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_dispause.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_skipprovious.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_skipprovious.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_like.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_like.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_item_song.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/item_song.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_skipnext.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_skipnext.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_subpause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_subpause.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_like.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_like.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_subpause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_subpause.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_fragment_media_playback.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/fragment_media_playback.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_main.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\layout\\app_bar_main.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_shuff.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_shuff.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_pause.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable\\icon_pause.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_navigation_layout.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/navigation_layout.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_search.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_search.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable_noactionlayout.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/noactionlayout.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_skipnext.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_skipnext.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_skipnext.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_skipnext.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_favorites.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_favorites.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_select.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_select.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_repeat.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_repeat.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable_noactionlayout.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable\\noactionlayout.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_search.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_search.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_likeup.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_likeup.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_playmusic.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_playmusic.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_repeat.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_repeat.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_likeup.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_likeup.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_favorites.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_favorites.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_playmusic.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_playmusic.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_appmusic.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_appmusic.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_subpause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_subpause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_dislike.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_dislike.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_select.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_select.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_skipprovious.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_skipprovious.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_skipprovious.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_skipprovious.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_repeat.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_repeat.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_skipnext.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_skipnext.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_like.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_like.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_likeup.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_likeup.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_select.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_select.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_search.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\menu\\menu_search.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_musicicon.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_musicicon.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_playmusic.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_playmusic.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_select.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_select.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_select.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_select.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_shuff.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_shuff.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_search.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_search.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_likeup.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_likeup.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_likeup.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_likeup.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_shuff.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_shuff.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable_icon_pause.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/icon_pause.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_like.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_like.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_playmusic.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_playmusic.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_musicicon.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_musicicon.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_skipnext.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_skipnext.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_dislike.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_dislike.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_dislike.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_dislike.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_dislike.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_dislike.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_dislike.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_dislike.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_search.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_search.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_likeup.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_likeup.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_dislike.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_dislike.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_dispause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_dispause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_favorites.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_favorites.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_dispause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_dispause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_skipprovious.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_skipprovious.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\layout_navigation_layout.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\layout\\navigation_layout.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_dislike.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_dislike.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_dispause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_dispause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_skipnext.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_skipnext.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_playmusic.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_playmusic.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_app_bar_main.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/app_bar_main.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_select.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_select.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_playmusic.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_playmusic.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_favorites.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_favorites.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_repeat.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_repeat.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_repeat.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_repeat.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_playmusic.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_playmusic.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_repeat.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_repeat.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_like.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_like.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_musicicon.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_musicicon.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_like.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_like.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_subpause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_subpause.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_playmusic.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_playmusic.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_musicicon.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_musicicon.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_search.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_search.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_repeat.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_repeat.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\layout\\content_main.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_favorites.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_favorites.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_musicicon.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_musicicon.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_skipprovious.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_skipprovious.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/menu_menu_search.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/menu/menu_search.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_repeat.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_repeat.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_favorites.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_favorites.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_subpause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_subpause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_skipprovious.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_skipprovious.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_dispause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_dispause.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_shuff.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_shuff.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_skipnext.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_skipnext.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_favorites.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_favorites.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_dispause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_dispause.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_all_songs.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\layout\\fragment_all_songs.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_favorites.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_favorites.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_like.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_like.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_like.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_like.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_musicicon.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_musicicon.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_shuff.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_shuff.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_dispause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_dispause.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_subpause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_subpause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_dislike.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_dislike.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_dislike.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_dislike.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_musicicon.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_musicicon.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_appmusic.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_appmusic.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_skipprovious.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_skipprovious.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_likeup.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_likeup.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_skipprovious.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_skipprovious.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_likeup.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_likeup.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_shuff.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_shuff.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_song.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\layout\\item_song.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_dispause.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_dispause.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_dispause.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_dispause.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_select.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_select.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_search.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_search.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_search.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_search.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_content_main.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/content_main.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_search.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_search.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_favorites.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-mdpi\\ic_action_favorites.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_select.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_select.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_skipprovious.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_skipprovious.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_shuff.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_shuff.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_shuff.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_shuff.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_fragment_all_songs.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/fragment_all_songs.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_musicicon.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_musicicon.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_likeup.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_likeup.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_playmusic.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_playmusic.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_like.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_like.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_select.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_select.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_search.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_search.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_musicicon.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_musicicon.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_skipprovious.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_skipprovious.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_subpause.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_subpause.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_playmusic.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_playmusic.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_repeat.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_repeat.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_skipnext.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_skipnext.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_search.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_search.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_shuff.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_shuff.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_dispause.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_dispause.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_musicicon.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_musicicon.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_dislike.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-hdpi\\ic_action_dislike.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_skipnext.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_skipnext.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_favorites.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_favorites.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_subpause.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_subpause.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_like.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_like.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_select.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_select.xml"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_skipnext.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-anydpi\\ic_action_skipnext.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_repeat.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_repeat.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_likeup.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_likeup.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_media_playback.xml.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\layout\\fragment_media_playback.xml"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_shuff.png.flat",
-        "source": "D:\\Android\\Music-BKAV\\ActivityMusic\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_shuff.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_subpause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_subpause.png"
     }
 ]

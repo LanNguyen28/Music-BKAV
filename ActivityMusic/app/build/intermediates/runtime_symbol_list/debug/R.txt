@@ -2993,6 +2993,7 @@ int style Theme_MaterialComponents_Light_NoActionBar 0x7f1001d6
 int style Theme_MaterialComponents_Light_NoActionBar_Bridge 0x7f1001d7
 int style Theme_MaterialComponents_NoActionBar 0x7f1001d8
 int style Theme_MaterialComponents_NoActionBar_Bridge 0x7f1001d9
+int style ThemeApp 0x7f1001da
 int style ThemeOverlay_AppCompat 0x7f1001db
 int style ThemeOverlay_AppCompat_ActionBar 0x7f1001dc
 int style ThemeOverlay_AppCompat_Dark 0x7f1001dd

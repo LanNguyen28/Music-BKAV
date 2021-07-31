@@ -6,61 +6,61 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml
+8-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml
+9-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
-11-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:6:5-7:47
-11-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:6:22-77
+11-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:6:5-7:47
+11-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:6:22-77
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:8:5-79
-12-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:8:22-77
+12-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:8:5-79
+12-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:8:22-77
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:9:5-80
-13-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:9:22-78
+13-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:9:5-80
+13-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:9:22-78
 14
 15    <application
-15-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:11:5-32:19
+15-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:11:5-32:19
 16        android:allowBackup="true"
-16-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:12:9-35
+16-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:12:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-17-->[androidx.core:core:1.5.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\cc5e9dcdc56dc39042f72c501235e83f\core-1.5.0\AndroidManifest.xml:24:18-86
+17-->[androidx.core:core:1.5.0] /home/lanntp/.gradle/caches/transforms-2/files-2.1/cc5e9dcdc56dc39042f72c501235e83f/core-1.5.0/AndroidManifest.xml:24:18-86
 18        android:debuggable="true"
 19        android:extractNativeLibs="false"
 20        android:icon="@drawable/ic_appmusic"
-20-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:13:9-45
+20-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:13:9-45
 21        android:label="@string/app_name"
-21-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:14:9-41
+21-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:14:9-41
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:15:9-54
+22-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:15:9-54
 23        android:supportsRtl="true"
-23-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:16:9-35
+23-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:16:9-35
 24        android:testOnly="true"
 25        android:theme="@style/AppTheme" >
-25-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:17:9-40
+25-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:17:9-40
 26        <service
-26-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:18:9-23:19
+26-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:18:9-23:19
 27            android:name="com.example.activitymusic.service.MediaPlaybackService"
-27-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:19:13-57
+27-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:19:13-57
 28            android:enabled="true"
-28-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:20:13-35
+28-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:20:13-35
 29            android:exported="true" >
-29-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:21:13-36
+29-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:21:13-36
 30        </service>
 31
 32        <activity android:name="com.example.activitymusic.MainActivity" >
-32-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:25:9-31:20
-32-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:25:19-47
+32-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:25:9-31:20
+32-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:25:19-47
 33            <intent-filter>
-33-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:26:13-30:29
+33-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:26:13-30:29
 34                <action android:name="android.intent.action.MAIN" />
-34-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:27:17-69
-34-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:27:25-66
+34-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:27:17-69
+34-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:27:25-66
 35
 36                <category android:name="android.intent.category.LAUNCHER" />
-36-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:29:17-77
-36-->D:\Android\Music-BKAV\ActivityMusic\app\src\main\AndroidManifest.xml:29:27-74
+36-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:29:17-77
+36-->/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/AndroidManifest.xml:29:27-74
 37            </intent-filter>
 38        </activity>
 39    </application>

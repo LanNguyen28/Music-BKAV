@@ -47,8 +47,10 @@ public class SongMedia {
         return mMediaPlayer;
     }
 
-    public void seekTo(int position) {
-        mMediaPlayer.seekTo(position);
+    public void seekTo(int position) { mMediaPlayer.seekTo(position); }
+
+    public void setMediaUpdateUI(UIMediaUpdate mUIMediaUpdate) {
+        this.mUIMediaUpdate = mUIMediaUpdate;
     }
 
     public  int getCurrentPosition(){
@@ -134,10 +136,5 @@ public class SongMedia {
             pos = mSongItems.size() - 1;
         }
         mCurrentPlay = pos;
-    }
-
-
-    public void setMediaUpdateUI(UIMediaUpdate mUIMediaUpdate) {
-        this.mUIMediaUpdate = mUIMediaUpdate;
     }
 }

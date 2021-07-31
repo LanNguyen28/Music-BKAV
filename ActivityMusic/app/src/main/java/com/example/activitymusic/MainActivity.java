@@ -38,35 +38,35 @@ public class MainActivity extends AppCompatActivity  {
 /*        mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);*/
 
-        if (checkPermission()) {
-           // setAudio();
-        }
+//        if (checkPermission()) {
+//           // setAudio();
+//        }
 
     }
 
-    public boolean checkPermission() {
-        int READ_EXTERNAL_PERMISSION = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        if((READ_EXTERNAL_PERMISSION != PackageManager.PERMISSION_GRANTED)) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_READ);
-            return false;
-        }
-        return true;
-    }
-
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case  PERMISSION_READ: {
-                if (grantResults.length > 0 && permissions[0].equals(Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                    if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
-                        Toast.makeText(getApplicationContext(), "Please allow storage permission", Toast.LENGTH_LONG).show();
-                    } else {
-                       // setAudio();
-                    }
-                }
-            }
-        }
-    }
+//    public boolean checkPermission() {
+//        int READ_EXTERNAL_PERMISSION = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+//        if((READ_EXTERNAL_PERMISSION != PackageManager.PERMISSION_GRANTED)) {
+//            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_READ);
+//            return false;
+//        }
+//        return true;
+//    }
+//
+//    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        switch (requestCode) {
+//            case  PERMISSION_READ: {
+//                if (grantResults.length > 0 && permissions[0].equals(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+//                    if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+//                        Toast.makeText(getApplicationContext(), "Please allow storage permission", Toast.LENGTH_LONG).show();
+//                    } else {
+//                       // setAudio();
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,17 +83,6 @@ public class MainActivity extends AppCompatActivity  {
         }
         return super.onOptionsItemSelected(item);
     }
-
-//    public void setAudio() {
-//        mRcvSongList = findViewById(R.id.recyclerV_Song);
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-//        mRcvSongList.setLayoutManager(linearLayoutManager);
-//        mSongItemAdapter = new SongItemAdapter(mSongItems, this);
-//        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,
-//                DividerItemDecoration.VERTICAL);
-//        mRcvSongList.addItemDecoration(itemDecoration);
-//        mRcvSongList.setAdapter(mSongItemAdapter);
-//    }
 
     public void init() {
         mSongItems = new ArrayList<>();

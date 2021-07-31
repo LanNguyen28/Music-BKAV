@@ -66,7 +66,7 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
         return minutes + ":" + seconds;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+     class ViewHolder extends RecyclerView.ViewHolder {
         private TextView mSongName;
         private TextView mSongTime;
         private TextView mSongID;
@@ -99,9 +99,6 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
             mLayoutClick.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    mSongID.setVisibility(View.INVISIBLE);
-//                    mImageID.setVisibility(View.VISIBLE);
-//                    mSongName.setTypeface(null, Typeface.BOLD);
                     mIiClickItems.onItemClick(songItem,pos);
                 }
             });
