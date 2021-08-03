@@ -13,20 +13,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.activitymusic.R;
 import com.example.activitymusic.interfaces.IIClickItems;
 import com.example.activitymusic.model.SongItem;
-import com.example.activitymusic.R;
 
 import java.util.ArrayList;
 
+//import eu.gsottbauer.equalizerview.EqualizerView;
+
 public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHolder> {
     private ArrayList<SongItem> mSongItems;
-    private Context mContext;
+    private Context mContext;                       // khai báo biến
     private IIClickItems mIiClickItems;
 
     public SongItemAdapter(ArrayList<SongItem> mSongItems, Context mContext, IIClickItems mIiClickItems) {
         this.mSongItems = mSongItems;
-        this.mContext = mContext;
+        this.mContext = mContext;                                //khởi tạo biến
         this.mIiClickItems = mIiClickItems;
 
     }
@@ -55,6 +57,7 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
         return mSongItems.size();
     }
 
+    // xác định thời gian bài hát
     private String getDuration(String time) {
         long duration = Long.parseLong(time);
         int minutes = (int) (duration / 1000 / 60);
@@ -66,20 +69,22 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
         return minutes + ":" + seconds;
     }
 
-     class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView mSongName;
         private TextView mSongTime;
-        private TextView mSongID;
+        private TextView mSongID;                    // khai báo biến
         private ImageView mImageID;
         private ImageButton mSelectSong;
         private RelativeLayout mLayoutClick;
+       // private EqualizerView mEqualizer;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mSongName = itemView.findViewById(R.id.textV_Namesong);
             mSongTime = itemView.findViewById(R.id.textV_Timesong);
-            mSongID = itemView.findViewById(R.id.textV_IDsong);
+            mSongID = itemView.findViewById(R.id.textV_IDsong);                     //ánh xạ
             mImageID = itemView.findViewById(R.id.ImgV_IDSong);
+            //mEqualizer = itemView.findViewById(R.id.EquaV_IDSong);
             mSelectSong = itemView.findViewById(R.id.Img_SongSelect);
             mLayoutClick = itemView.findViewById(R.id.LayoutClick);
         }
@@ -92,21 +97,29 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
             if(songItem.ismIsPlay())
             {
                 mSongID.setVisibility(View.INVISIBLE);
-                mImageID.setVisibility(View.VISIBLE);
+                mImageID.setVisibility(View.VISIBLE);                                 // set item về chữ đậm, có đổi stt thành icon chơi nhạc
+                //mEqualizer.animateBars();
                 mSongName.setTypeface(null, Typeface.BOLD);
+            }
+            else
+            {
+               // mEqualizer.stopBars();
+                mSongID.setVisibility(View.VISIBLE);
+                mImageID.setVisibility(View.INVISIBLE);                           // set item về stt,chữ thường,
+                mSongName.setTypeface(null, Typeface.NORMAL);
             }
 
             mLayoutClick.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mIiClickItems.onItemClick(songItem,pos);
+                    mIiClickItems.onItemClick(songItem,pos);                   //click item bài hát show ra thông tin vắn tắt bài hát đang phát
                 }
             });
             mSelectSong.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (mIiClickItems != null) {
-                        mIiClickItems.onSongBtnClickListener(mSelectSong, view, songItem , pos);
+                        mIiClickItems.onSongBtnClickListener(mSelectSong, view, songItem , pos);    // click dấu ... của bài hát
                     }
                 }
             });

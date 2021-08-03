@@ -1,6 +1,7 @@
 package com.example.activitymusic.service;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.util.Log;
 
@@ -14,10 +15,26 @@ public class SongMedia {
     private ArrayList<SongItem> mSongItems = new ArrayList<>();
     private MediaPlayer mMediaPlayer;
     private boolean isStatusPlay = false;
-    private int mCurrentPlay = -1;
+    private int mCurrentPlay = -1;                                        // khởi tạo
     private Context mContext;
     private boolean isPause =false;
     private UIMediaUpdate mUIMediaUpdate;
+    private SongItem mSongItem;
+    private long mIdPlay;
+    private boolean isResume = false;
+    SharedPreferences sharedPreferencesCurrent;
+    private boolean isFist = true;
+
+    public boolean isResume() {
+        return isResume;
+    }
+    public long getIdPlay() {
+        return mIdPlay;
+    }
+
+    public void setIdPlay(long mIdPlay) {
+        this.mIdPlay = mIdPlay;
+    }
 
     public void setmListSong(ArrayList<SongItem> mSongItems) {
         this.mSongItems = mSongItems;
@@ -137,4 +154,5 @@ public class SongMedia {
         }
         mCurrentPlay = pos;
     }
+
 }

@@ -3,20 +3,19 @@ package com.example.activitymusic.model;
 public class SongItem {
     private long mSongID;
     private String mSongName;
-    private String mSongTime;
+    private String mSongTime;         // khởi tạo biến
     private String mSongAuthor;
     private String mSongImg;
+    private boolean mIsPlay;
 
     public SongItem(long mSongID, String mSongName, String mSongTime, String mSongAuthor, String mSongImg, boolean mIsPlay) {
         this.mSongID = mSongID;
         this.mSongName = mSongName;
-        this.mSongTime = mSongTime;
+        this.mSongTime = mSongTime;                                    // khai báo biến
         this.mSongAuthor = mSongAuthor;
         this.mSongImg = mSongImg;
         this.mIsPlay = mIsPlay;
     }
-
-    private boolean mIsPlay;
 
     public boolean ismIsPlay() {
         return mIsPlay;

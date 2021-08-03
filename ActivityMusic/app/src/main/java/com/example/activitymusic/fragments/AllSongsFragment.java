@@ -2,10 +2,12 @@ package com.example.activitymusic.fragments;
 
 import android.content.ComponentName;
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.database.Cursor;
+import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,6 +32,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.activitymusic.adapter.SongItemAdapter;
 import com.example.activitymusic.interfaces.IIClickItems;
 import com.example.activitymusic.model.SongItem;
@@ -37,26 +40,27 @@ import com.example.activitymusic.R;
 import com.example.activitymusic.service.MediaPlaybackService;
 import com.example.activitymusic.service.SongMedia;
 
+import java.io.IOException;
+import java.time.Instant;
+import java.time.temporal.TemporalAdjuster;
 import java.util.ArrayList;
 import java.util.Collections;
+
 import static android.content.Context.BIND_AUTO_CREATE;
 
 public class AllSongsFragment extends Fragment implements View.OnClickListener, IIClickItems {
     public static final String ID_CHANNEL = "21";
     private RecyclerView mRcvSong;
     private ArrayList<SongItem> mSongItems;
-    private SongItemAdapter mSongAdapter;
+    private SongItemAdapter mSongAdapter;                  // khai báo biến
     private RelativeLayout mLlBottom;
     private ImageView mSongImg;
-    private Button mBtnPlay;
+    private ImageButton mBtnPlay;
     private TextView mSongName, mSongAuthor;
     public MediaPlaybackService mMusicService;
-    private SongMedia mSongMedia;
     private int mPosCurrent;
+    private View mViewBottom;
 
-    public SongMedia getMedia() {
-        return mSongMedia;
-    }
 
     public AllSongsFragment() {
         // Required empty public constructor
@@ -89,6 +93,7 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         }
     }
 
+// gọi service
     private void setService() {
         Intent intent = new Intent(getActivity(), MediaPlaybackService.class);
         getActivity().startService(intent);
@@ -100,8 +105,7 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         public void onServiceConnected(ComponentName name, IBinder service) {
             MediaPlaybackService.MusicBinder binder = (MediaPlaybackService.MusicBinder) service;
             mMusicService = binder.getMusicService();
-
-           mMusicService.getMedia().setmListSong(mSongItems);
+            mMusicService.getMedia().setmListSong(mSongItems);
             getDataBottom();
             mSongAdapter.notifyDataSetChanged();
         }
@@ -121,40 +125,46 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         mRcvSong = view.findViewById(R.id.recyclerV_Song);
         mSongName = view.findViewById(R.id.textV_bottom_songName);
         mSongAuthor = view.findViewById(R.id.textV_bottom_songAuthor);
-        mLlBottom = view.findViewById(R.id.bottom_relativeLayout);
+        mLlBottom = view.findViewById(R.id.bottom_relativeLayout);             // ánh xạ
         mBtnPlay = view.findViewById(R.id.btn_play);
+        mViewBottom = view.findViewById(R.id.view_bottom);
         mLlBottom.setOnClickListener(this);
         mBtnPlay.setOnClickListener(this);
 
 
-        LinearLayoutManager manager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager manager = new LinearLayoutManager(getActivity());           // set hiển thị cho recyclerview
         manager.setOrientation(RecyclerView.VERTICAL);
         mRcvSong.setLayoutManager(manager);
         mSongAdapter = new SongItemAdapter(mSongItems, getActivity(), this);
         mRcvSong.setAdapter(mSongAdapter);
         getDataBottom();
 
-        mSongAdapter.notifyDataSetChanged();
 
         if (mMusicService != null) {
+
             mLlBottom.setVisibility(View.VISIBLE);
+            mViewBottom.setVisibility(View.VISIBLE);
             mSongName.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongName());
-            mSongAuthor.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongAuthor());
-        }
+            mSongAuthor.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongAuthor());        // show data vắn tắt bài hát
+            if (!mMusicService.getMedia().isStatusPlay()) {
+                mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
 
-        if (!mMusicService.getMedia().isStatusPlay()) {
-            mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+                byte[] songArt = getAlbumImg(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongImg());
+                Glide.with(view.getContext()).asBitmap()
+                        .error(R.drawable.backgroundmusic)
+                        .load(songArt)
+                        .into(mSongImg);
+            }
         }
-
     }
 
+    // lấy bài hát trong thiết bị
     public void getSong() {
         ContentResolver musicResolver = getActivity().getContentResolver();
         Uri songUri = android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
-//        String selection = MediaStore.Audio.Media.IS_MUSIC + "!= 0";
+        String selection = MediaStore.Audio.Media.IS_MUSIC + "=?";
 //        String sortOrder = MediaStore.Audio.Media.TITLE + " ASC";
-        Cursor songCursor = musicResolver.query(songUri, null, null, null, null);
-
+        Cursor songCursor = musicResolver.query(songUri, null, selection, new String[]{String.valueOf(1)}, null);
 
         if (songCursor != null && songCursor.moveToFirst()) {
             int songID = songCursor.getColumnIndex(MediaStore.Audio.Media._ID);
@@ -174,29 +184,35 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         }
     }
 
+    // sắp xếp bài hát a-z
     public void songItemSort(ArrayList<SongItem> listItem) {
         for (int i = 0; i < listItem.size(); i++) {
             for (int j = i + 1; j < listItem.size(); j++) {
                 if (listItem.get(i).getmSongName().compareTo(listItem.get(j).getmSongName()) > 0) {
                     Collections.swap(listItem, i, j);
                 }
-
             }
         }
 
     }
 
+    //truyền dữ liệu bài hát vào thông tin vắn tắt bài hát
     public void getDataBottom() {
         if (mMusicService != null && mMusicService.getMedia().getmCurrentPlay() >= 0) {
             mLlBottom.setVisibility(View.VISIBLE);
+            mViewBottom.setVisibility(View.VISIBLE);
 
             mSongName.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongName());
             mSongAuthor.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongAuthor());
-
+            byte[] songImg = getAlbumImg(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongImg());
+            Glide.with(getContext()).asBitmap()
+                    .error(R.drawable.backgroundmusic)
+                    .load(songImg)
+                    .into(mSongImg);
             if (mMusicService.getMedia().isStatusPlay()) {
-                mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+                mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
             } else {
-                mBtnPlay.setBackgroundResource(R.drawable.ic_action_dispause);
+                mBtnPlay.setBackgroundResource(R.drawable.ic_black_play);
             }
 
             for (int i = 0; i < mSongItems.size(); i++) {
@@ -206,35 +222,40 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         }
     }
 
+// chuyển đường dẫn file ảnh bài hát về ảnh
+    public static byte[] getAlbumImg(String uri) {
+        MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
+        mediaMetadataRetriever.setDataSource(uri);
+        byte[] albumImg = mediaMetadataRetriever.getEmbeddedPicture();
+        mediaMetadataRetriever.release();
+        return albumImg;
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_play: {
-                Toast.makeText(getActivity(), "pausemusic", Toast.LENGTH_SHORT).show();
+            case R.id.btn_play: {              // click button play/pause ở thông tin vắn tắt bài hát
                 if (mMusicService.getMedia().isStatusPlay()) {
                     mMusicService.getMedia().pauseSong();
-                    mBtnPlay.setBackgroundResource(R.drawable.ic_action_dispause);
+                    mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
 
                 } else {
-                    Toast.makeText(getActivity(), "playmusic", Toast.LENGTH_SHORT).show();
                     mMusicService.getMedia().resumeSong();
-                    mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+                    mBtnPlay.setBackgroundResource(R.drawable.ic_black_play);
                 }
                 break;
             }
-            case R.id.bottom: {
+            case R.id.bottom_relativeLayout: {                  // click thông tin vắn tắt bài hát show đến giao diện mediaPlaybackFragment
                 mPosCurrent = mMusicService.getMedia().getmCurrentPlay();
                 SongItem mSongItem = mSongItems.get(mPosCurrent);
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 MediaPlaybackFragment mediaPlaybackFragment = MediaPlaybackFragment.newInstance(
                         mSongItem.getmSongName(), mSongItem.getmSongAuthor(), mSongItem.getmSongImg(), mPosCurrent);
-                mediaPlaybackFragment.getActivity();
                 ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
                 fragmentTransaction.replace(R.id.content, mediaPlaybackFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
-                Log.d("LanNTp", "onClick: ");
                 break;
             }
             default: {
@@ -242,27 +263,38 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         }
     }
 
+
+    // click item bài hát
     @Override
     public void onItemClick(SongItem songItem, int pos) {
         for (int i = 0; i < mSongItems.size(); i++) {
             mSongItems.get(i).setmIsPlay(false);
         }
         mSongItems.get(pos).setmIsPlay(true);
-
         if (mMusicService != null) {
             mMusicService.getMedia().playSong(songItem.getmSongImg());
             mMusicService.getMedia().setmCurrentPlay(pos);
         }
-        mBtnPlay.setBackgroundResource(R.drawable.ic_action_subpause);
+
+        mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
 
         mLlBottom.setVisibility(View.VISIBLE);
-        Log.d("LanNTp", "onItemClick: " + mLlBottom);
+        mViewBottom.setVisibility(View.VISIBLE);
+
         mSongName.setText(songItem.getmSongName());
         mSongAuthor.setText(songItem.getmSongAuthor());
-        // mPosCurrent = pos;
+
+        byte[] songImg = getAlbumImg(mSongItems.get(pos).getmSongImg());
+        Glide.with(getContext()).asBitmap()
+                .error(R.drawable.backgroundmusic)
+                .load(songImg)
+                .into(mSongImg);
+
+        mPosCurrent = pos;
 
     }
 
+    // click dấu ... ở item bài hát
     @Override
     public void onSongBtnClickListener(ImageButton btnImg, View v, SongItem songItem, int pos) {
 

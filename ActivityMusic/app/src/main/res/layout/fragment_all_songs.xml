@@ -13,19 +13,25 @@
         android:layout_height="match_parent"
         android:layout_alignWithParentIfMissing="true"
         android:layout_above="@id/bottom_relativeLayout"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="-932dp">
+        android:layout_alignParentTop="true">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_above="@+id/bottom_relativeLayout"
+        android:background="@drawable/noactionlayout"
+        android:visibility="gone"/>
 
     <RelativeLayout
         android:id="@+id/bottom_relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="78dp"
+        android:background="@color/white"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:background="@drawable/noactionlayout"
         android:padding="2dp"
         android:visibility="gone">
 
@@ -34,16 +40,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="10dp"
-            >
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/img_bottomImg"
                 android:layout_width="58dp"
                 android:layout_height="88dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_appmusic"
-                />
+                android:src="@drawable/ic_appmusic" />
 
         </LinearLayout>
 
@@ -54,46 +58,42 @@
             android:layout_height="108dp"
             android:layout_marginEnd="1dp"
             android:layout_marginRight="1dp"
-            android:layout_toRightOf="@id/llImg"
+            android:layout_toEndOf="@+id/llImg"
             android:gravity="center_vertical"
             android:orientation="vertical"
-            android:paddingLeft="2dp">
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp">
 
             <TextView
                 android:id="@+id/textV_bottom_songName"
-                android:layout_width="275dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
                 android:singleLine="true"
-                android:text="hello"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textV_bottom_songAuthor"
-                android:layout_width="282dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
                 android:singleLine="true"
-                android:text="mymy"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
         </LinearLayout>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_play"
-            android:layout_width="52dp"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="-19dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_toRightOf="@+id/TV_LayoutDetal"
-            android:background="@drawable/ic_action_subpause">
-
-        </Button>
-
-
+            android:layout_toEndOf="@+id/TV_LayoutDetal"
+            android:background="@drawable/ic_white_pause"></ImageButton>
     </RelativeLayout>
 </RelativeLayout>
