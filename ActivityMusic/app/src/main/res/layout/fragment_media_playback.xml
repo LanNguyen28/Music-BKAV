@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/media_layout"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/media_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/img_background"
@@ -15,78 +15,80 @@ tools:context=".MainActivity">
 
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="75dp"
-    android:background="#E2E1E1E1"
-    android:orientation="horizontal"
-    android:weightSum="13">
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#E2E1E1E1"
+        android:orientation="horizontal"
+        android:weightSum="13">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2.3"
-        android:padding="7dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3"
+            android:padding="7dp">
 
-        <ImageView
-            android:id="@+id/ImgV_Media"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/ImgV_Media"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7.5"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="1dp">
+
+            <TextView
+                android:id="@+id/TV_songName_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#EB0C0C0C"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/TV_song_author_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#EB0C0C0C"
+                android:textSize="13sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_showList"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_action_musicicon" />
+
+            <ImageButton
+                android:id="@+id/btn_selectMedia"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_select_big" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="7.5"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:paddingLeft="1dp">
-
-        <TextView
-            android:id="@+id/TV_songName_media"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:text=""
-            android:textColor="#EB0C0C0C"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/TV_songAuthormedia"
-            android:layout_width="211dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-light"
-            android:singleLine="true"
-            android:text=""
-            android:textColor="#EB0C0C0C"
-            android:textSize="13sp">
-
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3.2"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/btn_showList"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="3dp"
-            android:background="@drawable/ic_action_musicicon" />
-
-        <ImageButton
-            android:id="@+id/btn_selectMedia"
-            android:layout_width="35dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/ic_action_select" />
-
-    </LinearLayout>
-</LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -136,8 +138,11 @@ tools:context=".MainActivity">
         android:layout_marginBottom="-8dp"
         android:backgroundTint="@color/orange"
         android:elevation="10dp"
-        android:progress="20"
+
+        android:progressDrawable="@drawable/line_seekbar"
         android:progressTint="@color/orange"
+        android:theme="@style/AppTheme"
+        android:thumb="@drawable/icon_seekbar"
         android:thumbTint="@color/orange" />
 
     <LinearLayout
@@ -185,7 +190,6 @@ tools:context=".MainActivity">
                     android:textSize="14sp" />
             </RelativeLayout>
 
-
         </LinearLayout>
 
         <LinearLayout
@@ -225,7 +229,7 @@ tools:context=".MainActivity">
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="13dp"
-                    android:background="@drawable/ic_action_skipprovious" />
+                    android:background="@drawable/ic_pre_black" />
             </LinearLayout>
 
             <LinearLayout
@@ -236,11 +240,12 @@ tools:context=".MainActivity">
 
                 <ImageButton
                     android:id="@+id/btn_play_media"
-                    android:layout_width="57dp"
+                    android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/icon_pause_background"
-                    android:src="@drawable/ic_white_pause" />
+                    android:src="@drawable/ic_pause_samll"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -254,7 +259,7 @@ tools:context=".MainActivity">
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="13dp"
-                    android:background="@drawable/ic_action_skipnext" />
+                    android:background="@drawable/ic_next_black" />
             </LinearLayout>
 
             <LinearLayout

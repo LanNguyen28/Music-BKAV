@@ -24,6 +24,7 @@ public class SongMedia {
     private boolean isResume = false;
     SharedPreferences sharedPreferencesCurrent;
     private boolean isFist = true;
+    SharedPreferences mSharedPreferencesCurrent;
 
     public boolean isResume() {
         return isResume;
@@ -70,17 +71,25 @@ public class SongMedia {
         this.mUIMediaUpdate = mUIMediaUpdate;
     }
 
-    public  int getCurrentPosition(){
-        if(mMediaPlayer!=null)
-            return mMediaPlayer.getCurrentPosition();
-        return 0;
+    public boolean isFist() {
+        return isFist;
     }
 
-    public long getDuration(){
-        if(mMediaPlayer!=null)
+
+    public int getCurrentPositionPlay() {
+        sharedPreferencesCurrent = mContext.getSharedPreferences("DATA_CURRENT_PLAY", Context.MODE_PRIVATE);
+        int position = sharedPreferencesCurrent.getInt("DATA_CURRENT_STREAM_POSITION", 0);
+        //if (isFist) return position;
+        //if ( mMediaPlayer != null)
+            return mMediaPlayer.getCurrentPosition();        //trả về vtri đang phát
+
+    }
+
+    public int getDuration(){
+        //if(mMediaPlayer!=null)
             return mMediaPlayer.getDuration();
 
-        return 0;
+        //return 0;
     }
 
     public SongMedia(Context mContext) {

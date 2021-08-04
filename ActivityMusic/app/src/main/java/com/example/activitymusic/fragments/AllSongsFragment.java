@@ -60,7 +60,11 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     public MediaPlaybackService mMusicService;
     private int mPosCurrent;
     private View mViewBottom;
+    protected boolean mIsShowVertical;
 
+    public void setmIsShow(boolean mIsShowVertical) {
+        this.mIsShowVertical = mIsShowVertical;
+    }
 
     public AllSongsFragment() {
         // Required empty public constructor
@@ -93,7 +97,7 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         }
     }
 
-// gọi service
+    // gọi service
     private void setService() {
         Intent intent = new Intent(getActivity(), MediaPlaybackService.class);
         getActivity().startService(intent);
@@ -199,8 +203,13 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     //truyền dữ liệu bài hát vào thông tin vắn tắt bài hát
     public void getDataBottom() {
         if (mMusicService != null && mMusicService.getMedia().getmCurrentPlay() >= 0) {
-            mLlBottom.setVisibility(View.VISIBLE);
-            mViewBottom.setVisibility(View.VISIBLE);
+            if (mIsShowVertical) {
+                mLlBottom.setVisibility(View.VISIBLE);
+                mViewBottom.setVisibility(View.VISIBLE);
+            } else {
+                mLlBottom.setVisibility(View.GONE);
+                mViewBottom.setVisibility(View.GONE);
+            }
 
             mSongName.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongName());
             mSongAuthor.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongAuthor());
@@ -222,7 +231,7 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         }
     }
 
-// chuyển đường dẫn file ảnh bài hát về ảnh
+    // chuyển đường dẫn file ảnh bài hát về ảnh
     public static byte[] getAlbumImg(String uri) {
         MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
         mediaMetadataRetriever.setDataSource(uri);
@@ -247,12 +256,16 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
             }
             case R.id.bottom_relativeLayout: {                  // click thông tin vắn tắt bài hát show đến giao diện mediaPlaybackFragment
                 mPosCurrent = mMusicService.getMedia().getmCurrentPlay();
+                Log.d("LanNTp", "onClick: "+mPosCurrent);
                 SongItem mSongItem = mSongItems.get(mPosCurrent);
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 MediaPlaybackFragment mediaPlaybackFragment = MediaPlaybackFragment.newInstance(
                         mSongItem.getmSongName(), mSongItem.getmSongAuthor(), mSongItem.getmSongImg(), mPosCurrent);
-                ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+                ((AppCompatActivity) getActivity()).getSupportActionBar().hide();                   // ẩn actionbar
+                mediaPlaybackFragment.setmIsShow(mIsShowVertical);
+                mediaPlaybackFragment.setmMusicService(mMusicService);
+                mediaPlaybackFragment.setmSongItems(mSongItems);
                 fragmentTransaction.replace(R.id.content, mediaPlaybackFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
@@ -267,29 +280,45 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     // click item bài hát
     @Override
     public void onItemClick(SongItem songItem, int pos) {
-        for (int i = 0; i < mSongItems.size(); i++) {
-            mSongItems.get(i).setmIsPlay(false);
+        if (mIsShowVertical) { // khi doc
+            mLlBottom.setVisibility(View.VISIBLE);
+            mViewBottom.setVisibility(View.VISIBLE);
+
+            for (int i = 0; i < mSongItems.size(); i++) {
+                mSongItems.get(i).setmIsPlay(false);
+            }
+            mSongItems.get(pos).setmIsPlay(true);
+
+            if (mMusicService != null) {
+                mMusicService.getMedia().playSong(songItem.getmSongImg());
+                mMusicService.getMedia().setmCurrentPlay(pos);
+            }
+            mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
+
+            mSongName.setText(songItem.getmSongName());
+            mSongAuthor.setText(songItem.getmSongAuthor());
+            byte[] songImg = getAlbumImg(mSongItems.get(pos).getmSongImg());
+            Glide.with(getContext()).asBitmap()
+                    .error(R.drawable.backgroundmusic)
+                    .load(songImg)
+                    .into(mSongImg);
+
+        } else { //khi ngang
+
+            if (mMusicService != null) {
+                mMusicService.getMedia().setmCurrentPlay(pos);
+                mMusicService.getMedia().playSong(songItem.getmSongImg());       //play nhac
+            }
+            mLlBottom.setVisibility(View.GONE);
+            mViewBottom.setVisibility(View.GONE);
+            mSongName.setText(songItem.getmSongName());
+            mSongAuthor.setText(songItem.getmSongAuthor());
+            byte[] songImg = getAlbumImg(mSongItems.get(pos).getmSongImg());
+            Glide.with(getContext()).asBitmap()
+                    .error(R.drawable.backgroundmusic)
+                    .load(songImg)
+                    .into(mSongImg);
         }
-        mSongItems.get(pos).setmIsPlay(true);
-        if (mMusicService != null) {
-            mMusicService.getMedia().playSong(songItem.getmSongImg());
-            mMusicService.getMedia().setmCurrentPlay(pos);
-        }
-
-        mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
-
-        mLlBottom.setVisibility(View.VISIBLE);
-        mViewBottom.setVisibility(View.VISIBLE);
-
-        mSongName.setText(songItem.getmSongName());
-        mSongAuthor.setText(songItem.getmSongAuthor());
-
-        byte[] songImg = getAlbumImg(mSongItems.get(pos).getmSongImg());
-        Glide.with(getContext()).asBitmap()
-                .error(R.drawable.backgroundmusic)
-                .load(songImg)
-                .into(mSongImg);
-
         mPosCurrent = pos;
 
     }

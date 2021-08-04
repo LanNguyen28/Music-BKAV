@@ -10,4 +10,7 @@
     <color name="orange">#F65C2B</color>
     <color name="orange_dark">#C54016</color>
     <color name="gray">#6A6867</color>
+    <color name="seek_bar_background">#ababab</color>
+    <color name="seek_bar_progress">#F65C2B</color>
+    <color name="seek_bar_secondary_progress">#21E229</color>
 </resources>

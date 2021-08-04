@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +19,9 @@ import android.widget.Toast;
 
 import com.example.activitymusic.adapter.SongItemAdapter;
 import com.example.activitymusic.fragments.AllSongsFragment;
+import com.example.activitymusic.fragments.MediaPlaybackFragment;
 import com.example.activitymusic.model.SongItem;
+import com.example.activitymusic.service.MediaPlaybackService;
 
 import java.util.ArrayList;
 
@@ -28,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRcvSongList;                                   // khởi tạo biến
     private ArrayList<SongItem> mSongItems;
     private SongItemAdapter mSongItemAdapter;
-    private Toolbar mToolbar;
+    protected boolean mIsShowVertical;
+    public MediaPlaybackService mMusicService;
 
+    public MediaPlaybackService getMusicService() {
+        return mMusicService;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);*/
 
         if (checkPermission()) {
-            init();
+            getShowFragment();
         }
 
     }
@@ -61,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == MY_PERMISSIONS_REQUEST_READ_MEDIA) {
             if ((grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                init();
+                getShowFragment();
             } else {
                 finish();
             }
@@ -83,13 +90,38 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void init() {
-        mSongItems = new ArrayList<>();
+    public void getShowFragment() {
+        int mOrientation = getResources().getConfiguration().orientation;
+        if (mOrientation == Configuration.ORIENTATION_PORTRAIT) {
+            mIsShowVertical = true;
+        }
+        if (mOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+            mIsShowVertical = false;
+        }
 
-        FragmentManager manager = getSupportFragmentManager();
-        AllSongsFragment allSongsFragment = new AllSongsFragment();                   // Show allSongsFragment
-        FragmentTransaction fragmentTransaction = manager.beginTransaction();
-        fragmentTransaction.replace(R.id.content, allSongsFragment);
-        fragmentTransaction.commit();
+        if(mIsShowVertical) {  //khi dọc
+            FragmentManager manager = getSupportFragmentManager();
+            AllSongsFragment allSongsFragment = new AllSongsFragment();                          // Show allSongsFragment
+            allSongsFragment.setmIsShow(mIsShowVertical);
+            FragmentTransaction fragmentTransaction = manager.beginTransaction();
+            fragmentTransaction.replace(R.id.content, allSongsFragment);
+            fragmentTransaction.commit();
+        }
+        else { // khi ngang
+            FragmentManager manager = getSupportFragmentManager();
+            AllSongsFragment allSongsFragment = new AllSongsFragment();                   // Show allSongsFragment
+            allSongsFragment.setmIsShow(mIsShowVertical);
+
+            FragmentTransaction fragmentTransaction = manager.beginTransaction();
+            fragmentTransaction.replace(R.id.content, allSongsFragment);               //get fragment AllSongsFragment vào activity main
+            fragmentTransaction.commit();
+
+            MediaPlaybackFragment mMediaPlaybackFragment= new MediaPlaybackFragment();
+            mMediaPlaybackFragment.setmMusicService(mMusicService);
+            mMediaPlaybackFragment.setmIsShow(mIsShowVertical);
+            FragmentTransaction mPlayFragment = manager.beginTransaction();
+            mPlayFragment.replace(R.id.fragment_media, mMediaPlaybackFragment);
+            mPlayFragment.commit();
+        }
     }
 }

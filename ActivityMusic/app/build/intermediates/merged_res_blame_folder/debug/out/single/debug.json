@@ -24,20 +24,12 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_white_dislike.png"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_skipnext.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_skipnext.png"
-    },
-    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable_noactionlayout.xml.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/noactionlayout.xml"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_search.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_search.png"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_playmusic.png.flat",
@@ -52,16 +44,8 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_appmusic.png"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_select.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_select.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_skipprovious.xml.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_skipprovious.xml"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_select.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_select.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_pause_samll.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_pause_samll.png"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
@@ -76,36 +60,28 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/icon_pause_background.xml"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_select.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_select.png"
-    },
-    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_playmusic.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_playmusic.png"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_search.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_search.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout-land_fragment_media_playback.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout-land/fragment_media_playback.xml"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_playmusic.xml.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_playmusic.xml"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_skipnext.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_skipnext.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_fab_play.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_fab_play.png"
+    },
+    {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable_line_seekbar.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/line_seekbar.xml"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_favorites.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_favorites.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_skipnext.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_skipnext.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_skipprovious.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_skipprovious.png"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_backgroundmusic.png.flat",
@@ -148,6 +124,10 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_search_white.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_search_white.png"
+    },
+    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_repeat_white.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_repeat_white.png"
     },
@@ -184,6 +164,14 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_select_samll.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_select_samll.png"
+    },
+    {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_fab_pause.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_fab_pause.png"
+    },
+    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_musicicon.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_musicicon.png"
     },
@@ -194,6 +182,10 @@
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_black_like.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_black_like.png"
+    },
+    {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_pre_black.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_pre_black.png"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -212,28 +204,16 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_musicicon.png"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_skipprovious.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_skipprovious.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_skipprovious.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_skipprovious.png"
-    },
-    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout-land_content_main.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout-land/content_main.xml"
+    },
+    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_search.xml.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_search.xml"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_search.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_search.png"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_content_main.xml.flat",
@@ -244,40 +224,24 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_white_like.png"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_select.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_select.png"
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_next_black.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_next_black.png"
+    },
+    {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable_icon_seekbar.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/icon_seekbar.xml"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout_fragment_all_songs.xml.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/fragment_all_songs.xml"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_search.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_search.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_skipprovious.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-hdpi/ic_action_skipprovious.png"
-    },
-    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_playmusic.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xxhdpi/ic_action_playmusic.png"
     },
     {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_action_skipnext.png.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-mdpi/ic_action_skipnext.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_skipnext.xml.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_skipnext.xml"
-    },
-    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_musicicon.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_action_musicicon.png"
-    },
-    {
-        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_action_select.xml.flat",
-        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-anydpi/ic_action_select.xml"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_black_dislike.png.flat",
@@ -290,5 +254,9 @@
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_select_big.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_select_big.png"
     }
 ]
