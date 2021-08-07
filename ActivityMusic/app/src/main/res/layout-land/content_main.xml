@@ -14,7 +14,7 @@
         android:name="com.example.music.AllSongsFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="4"
+        android:layout_weight="6"
         tools:layout="@layout/fragment_all_songs" />
 
     <FrameLayout
@@ -23,6 +23,6 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
-        android:layout_weight="6"
+        android:layout_weight="8"
         tools:layout="@layout/fragment_media_playback" />
 </LinearLayout>

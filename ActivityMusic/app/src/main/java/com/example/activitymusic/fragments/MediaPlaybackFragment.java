@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.media.MediaMetadataRetriever;
 import android.os.Bundle;
 
@@ -62,6 +63,7 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
     private MediaPlaybackService mMusicService;
     private boolean mIsCheckRepeat = false;
     protected boolean mIsShowVertical;
+    SharedPreferences mSharedPreferencesCurrent;
 
     public ArrayList<SongItem> getmSongItems() {
         return mSongItems;
@@ -117,6 +119,7 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
         view = inflater.inflate(R.layout.fragment_media_playback, container, false);
         init();
         setDataTop();
+        setData();
         updateSeekBar();
         return view;
     }
@@ -178,13 +181,13 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
 
         }
         if(mMusicService!=null){
-        mSeeBar.setMax(mMusicService.getMedia().getDuration());}
+        mSeeBar.setMax(mMusicService.getDuration());}
 
         mSeeBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {               // gọi seekbar
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 if (mMusicService != null && b) {
-                    mMusicService.getMedia().seekTo(i);
+                    mMusicService.seekTo(i);
                 }
                 mSeeBar.setProgress(i);
             }
@@ -250,8 +253,7 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
     //lấy dữ liệu tóm tắt bài hát lên trên đầu khi đang chơi nhạc
     private void setDataTop() {
         if (mMusicService != null) {
-            int current = mMusicService.getMedia().getmCurrentPlay();
-            Log.d("LanNTp", "setDataTop: " + current);
+            int current = mMusicService.getmCurrentPlay();
             mSongName.setText(mSongItems.get(current).getmSongName());
             mSongAuthor.setText(mSongItems.get(current).getmSongAuthor());
             mEndTime.setText(showTime(mSongItems.get(current).getmSongTime()));
@@ -265,9 +267,12 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
                     .error(R.drawable.backgroundmusic)
                     .into(mBackground);
 
-            if (mMusicService.getMedia().isStatusPlay()) {
+            if (mMusicService.isStatusPlay()) {
                 mPlayMedia.setImageResource(R.drawable.ic_fab_pause);
             } else mPlayMedia.setImageResource(R.drawable.ic_fab_play);
+//            int position = mSharedPreferencesCurrent.getInt("DATA_CURRENT_STREAM_POSITION", 0);
+//            mSeeBar.setMax(Integer.valueOf(mSongItems.get(mMusicService.getmCurrentPlay()).getmSongTime()));
+//            mSeeBar.setProgress(position);
         }
         update();
 
@@ -281,22 +286,22 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
             public void run() {
                 Log.d("LanNTp", "run: 1");
                 if(mMusicService!=null)
-                if (mMusicService.getMedia().getmCurrentPlay() >= 0) {
+                if (mMusicService.getmCurrentPlay() >= 0) {
                     //while (mMusicService.getMedia().getPlayer() != null) {
                     long mCurrent = -1;
                     try {
-                        mCurrent = mMusicService.getMedia().getCurrentPositionPlay();
+                        mCurrent = mMusicService.getCurrentPositionPlay();
 
                     } catch (IllegalStateException e) {
 
                     }
                     final long finalCurrent = mCurrent;
                     SimpleDateFormat formatTime = new SimpleDateFormat("mm:ss");
-                    mSeeBar.setMax(mMusicService.getMedia().getDuration());
-                    mSeeBar.setProgress(mMusicService.getMedia().getCurrentPositionPlay());
-                    Log.d("LanNTp", "run: " + mMusicService.getMedia().getCurrentPositionPlay());
+                    mSeeBar.setMax(mMusicService.getDuration());
+                    mSeeBar.setProgress(mMusicService.getCurrentPositionPlay());
+                    Log.d("LanNTp", "run: " + mMusicService.getCurrentPositionPlay());
                     mPlayTime.setText(formatTime.format(finalCurrent));                                 //set time total/ end cho bài hát
-                    mEndTime.setText(formatTime.format(mMusicService.getMedia().getDuration()));
+                    mEndTime.setText(formatTime.format(mMusicService.getDuration()));
                     handler.postDelayed(this, 500);
                     //}
                 }
@@ -355,37 +360,41 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
                 mLikeMedia.setBackgroundResource(R.drawable.ic_white_like);
                 break;
             }
-            case R.id.btn_next_media: {            // click next bài hát
-                mMusicService.getMedia().nextSong(mPosCurrent);  // Next sang bài sau đó
-                mPosCurrent = mMusicService.getMedia().getmCurrentPlay();
-                SongItem mSong_next = mSongItems.get(mPosCurrent);
-                mSongNameMedia = mSong_next.getmSongName();
-                mSongAuthorMedia = mSong_next.getmSongAuthor();
-                mSongImgMedia = mSong_next.getmSongImg();
-                mMusicService.getMedia().playSong(mSong_next.getmSongImg());
-                setDataTop();
-                break;
+            case R.id.btn_next_media: {// click next bài hát
+                if (mMusicService != null) {
+                    mMusicService.nextSong(mPosCurrent);  // Next sang bài sau đó
+                    mPosCurrent = mMusicService.getmCurrentPlay();
+                    SongItem mSong_next = mSongItems.get(mPosCurrent);
+                    mSongNameMedia = mSong_next.getmSongName();
+                    mSongAuthorMedia = mSong_next.getmSongAuthor();
+                    mSongImgMedia = mSong_next.getmSongImg();
+                    mMusicService.playSong(mSong_next.getmSongImg());
+                    setDataTop();
+                    break;
+                }
             }
 
             case R.id.btn_pre_media: {   // click quay lại bài hát
-                mMusicService.getMedia().previousSong(mPosCurrent);     // quay về bài trước đó
-                mPosCurrent = mMusicService.getMedia().getmCurrentPlay();
-                SongItem mSong_pre = mSongItems.get(mPosCurrent);
-                mSongNameMedia = mSong_pre.getmSongName();
-                mSongAuthorMedia = mSong_pre.getmSongAuthor();
-                mSongImgMedia = mSong_pre.getmSongImg();
-                mMusicService.getMedia().playSong(mSong_pre.getmSongImg());
-                setDataTop();
-                break;
+                if (mMusicService != null) {
+                    mMusicService.previousSong(mPosCurrent);     // quay về bài trước đó
+                    mPosCurrent = mMusicService.getmCurrentPlay();
+                    SongItem mSong_pre = mSongItems.get(mPosCurrent);
+                    mSongNameMedia = mSong_pre.getmSongName();
+                    mSongAuthorMedia = mSong_pre.getmSongAuthor();
+                    mSongImgMedia = mSong_pre.getmSongImg();
+                    mMusicService.playSong(mSong_pre.getmSongImg());
+                    setDataTop();
+                    break;
+                }
             }
             case R.id.btn_repeat:
                 if (!mIsCheckRepeat) {
-                    mMusicService.getMedia().getPlayer().setLooping(true);
+                    mMusicService.getPlayer().setLooping(true);
                     mIsCheckRepeat = true;
                     mRepeat.setBackgroundResource(R.drawable.ic_repeat_one);
 
                 } else {
-                    mMusicService.getMedia().getPlayer().setLooping(false);
+                    mMusicService.getPlayer().setLooping(false);
                     mIsCheckRepeat = false;
                     mRepeat.setBackgroundResource(R.drawable.ic_repeat_white);
                 }
@@ -397,13 +406,14 @@ public class MediaPlaybackFragment extends Fragment implements View.OnClickListe
                 break;
 
             case R.id.btn_play_media: { // click play/pause bài hát
-                if (mMusicService.getMedia().getmCurrentPlay() >= 0) {
-                    if (mMusicService.getMedia().isStatusPlay()) {
-                        mMusicService.getMedia().pauseSong();
+                if (mMusicService.getmCurrentPlay() >= 0) {
+                    Log.d("LanNTp", "onClick: "+mMusicService);
+                    if (mMusicService.isStatusPlay()) {
+                        mMusicService.pauseSong();
                         mPlayMedia.setImageResource(R.drawable.ic_fab_play);
 
                     } else {
-                        mMusicService.getMedia().resumeSong();
+                        mMusicService.resumeSong();
                         mPlayMedia.setImageResource(R.drawable.ic_fab_pause);
                     }
                 }

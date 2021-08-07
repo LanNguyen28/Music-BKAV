@@ -10,9 +10,14 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -37,11 +42,12 @@ public class MainActivity extends AppCompatActivity {
     public MediaPlaybackService getMusicService() {
         return mMusicService;
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // init();
+        // init();
 
 /*        mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);*/
@@ -76,6 +82,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        setService();
+        getSupportActionBar().show();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mMusicService != null) {
+            unbindService(serviceConnection);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    // gọi service
+    private void setService() {
+        Intent intent = new Intent(this, MediaPlaybackService.class);
+        startService(intent);
+        bindService(intent, serviceConnection, BIND_AUTO_CREATE);
+    }
+
+    private ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            MediaPlaybackService.MusicBinder binder = (MediaPlaybackService.MusicBinder) service;
+            mMusicService = binder.getMusicService();
+           mMusicService.setmListSong(mSongItems);
+           //getShowFragment();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            mMusicService = null;
+        }
+    };
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_search, menu);
         return true;
@@ -99,15 +147,16 @@ public class MainActivity extends AppCompatActivity {
             mIsShowVertical = false;
         }
 
-        if(mIsShowVertical) {  //khi dọc
+        if (mIsShowVertical) {  //khi dọc
             FragmentManager manager = getSupportFragmentManager();
             AllSongsFragment allSongsFragment = new AllSongsFragment();                          // Show allSongsFragment
             allSongsFragment.setmIsShow(mIsShowVertical);
+            allSongsFragment.setmMusicService(mMusicService);
             FragmentTransaction fragmentTransaction = manager.beginTransaction();
             fragmentTransaction.replace(R.id.content, allSongsFragment);
             fragmentTransaction.commit();
-        }
-        else { // khi ngang
+
+        } else { // khi ngang
             FragmentManager manager = getSupportFragmentManager();
             AllSongsFragment allSongsFragment = new AllSongsFragment();                   // Show allSongsFragment
             allSongsFragment.setmIsShow(mIsShowVertical);
@@ -116,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.content, allSongsFragment);               //get fragment AllSongsFragment vào activity main
             fragmentTransaction.commit();
 
-            MediaPlaybackFragment mMediaPlaybackFragment= new MediaPlaybackFragment();
+            MediaPlaybackFragment mMediaPlaybackFragment = new MediaPlaybackFragment();
             mMediaPlaybackFragment.setmMusicService(mMusicService);
             mMediaPlaybackFragment.setmIsShow(mIsShowVertical);
             FragmentTransaction mPlayFragment = manager.beginTransaction();

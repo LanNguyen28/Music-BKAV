@@ -1,5 +1,6 @@
 package com.example.activitymusic.fragments;
 
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -33,6 +34,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.activitymusic.MainActivity;
 import com.example.activitymusic.adapter.SongItemAdapter;
 import com.example.activitymusic.interfaces.IIClickItems;
 import com.example.activitymusic.model.SongItem;
@@ -45,6 +47,7 @@ import java.time.Instant;
 import java.time.temporal.TemporalAdjuster;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import static android.content.Context.BIND_AUTO_CREATE;
 
@@ -70,6 +73,26 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
         // Required empty public constructor
     }
 
+    public void setmMusicService(MediaPlaybackService mMusicService) {
+        this.mMusicService = mMusicService;
+    }
+
+    private MediaPlaybackService getMusicService() {
+        return getActivityMusic().getMusicService();
+    }
+
+    public void setData() {
+        mMusicService = getMusicService();
+    }
+
+    //get activity
+    private MainActivity getActivityMusic() {
+        if (getActivity() instanceof Activity) {
+            return (MainActivity) getActivity();
+        }
+        return null;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,51 +102,26 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_all_songs, container, false);
+        setData();
         init(view);
+        Log.d("LanNTp", "onCreateView: "+mMusicService);
         return view;
     }
 
     @Override
     public void onStart() {
-        setService();
         super.onStart();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (mMusicService != null) {
-            getActivity().unbindService(serviceConnection);
-        }
+
     }
 
-    // gọi service
-    private void setService() {
-        Intent intent = new Intent(getActivity(), MediaPlaybackService.class);
-        getActivity().startService(intent);
-        getActivity().bindService(intent, serviceConnection, BIND_AUTO_CREATE);
-    }
-
-    private ServiceConnection serviceConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            MediaPlaybackService.MusicBinder binder = (MediaPlaybackService.MusicBinder) service;
-            mMusicService = binder.getMusicService();
-            mMusicService.getMedia().setmListSong(mSongItems);
-            getDataBottom();
-            mSongAdapter.notifyDataSetChanged();
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            mMusicService = null;
-        }
-    };
 
     private void init(final View view) {
         mSongItems = new ArrayList<>();
-        // mediaPlayer = new MediaPlayer();
-
         getSong();
         mSongImg = view.findViewById(R.id.img_bottomImg);
         mRcvSong = view.findViewById(R.id.recyclerV_Song);
@@ -145,15 +143,15 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
 
 
         if (mMusicService != null) {
-
+            Log.d("LanNTp", "init: "+mMusicService);
             mLlBottom.setVisibility(View.VISIBLE);
             mViewBottom.setVisibility(View.VISIBLE);
-            mSongName.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongName());
-            mSongAuthor.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongAuthor());        // show data vắn tắt bài hát
-            if (!mMusicService.getMedia().isStatusPlay()) {
+            mSongName.setText(mSongItems.get(mMusicService.getmCurrentPlay()).getmSongName());
+            mSongAuthor.setText(mSongItems.get(mMusicService.getmCurrentPlay()).getmSongAuthor());        // show data vắn tắt bài hát
+            if (!mMusicService.isStatusPlay()) {
                 mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
 
-                byte[] songArt = getAlbumImg(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongImg());
+                byte[] songArt = getAlbumImg(mSongItems.get(mMusicService.getmCurrentPlay()).getmSongImg());
                 Glide.with(view.getContext()).asBitmap()
                         .error(R.drawable.backgroundmusic)
                         .load(songArt)
@@ -202,7 +200,8 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
 
     //truyền dữ liệu bài hát vào thông tin vắn tắt bài hát
     public void getDataBottom() {
-        if (mMusicService != null && mMusicService.getMedia().getmCurrentPlay() >= 0) {
+        if (mMusicService != null && mMusicService.getmCurrentPlay() >= 0) {
+            Log.d("LanNTp", "getDataBottom: "+mMusicService);
             if (mIsShowVertical) {
                 mLlBottom.setVisibility(View.VISIBLE);
                 mViewBottom.setVisibility(View.VISIBLE);
@@ -211,24 +210,24 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
                 mViewBottom.setVisibility(View.GONE);
             }
 
-            mSongName.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongName());
-            mSongAuthor.setText(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongAuthor());
-            byte[] songImg = getAlbumImg(mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).getmSongImg());
+            mSongName.setText(mSongItems.get(mMusicService.getmCurrentPlay()).getmSongName());
+            mSongAuthor.setText(mSongItems.get(mMusicService.getmCurrentPlay()).getmSongAuthor());
+            byte[] songImg = getAlbumImg(mSongItems.get(mMusicService.getmCurrentPlay()).getmSongImg());
             Glide.with(getContext()).asBitmap()
                     .error(R.drawable.backgroundmusic)
                     .load(songImg)
                     .into(mSongImg);
-            if (mMusicService.getMedia().isStatusPlay()) {
-                mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
-            } else {
+            if (mMusicService.isStatusPlay()) {
                 mBtnPlay.setBackgroundResource(R.drawable.ic_black_play);
+            } else {
+                mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
             }
 
             for (int i = 0; i < mSongItems.size(); i++) {
                 mSongItems.get(i).setmIsPlay(false);
             }
-            mSongItems.get(mMusicService.getMedia().getmCurrentPlay()).setmIsPlay(true);
-        }
+            mSongItems.get(mMusicService.getmCurrentPlay()).setmIsPlay(true);
+       }
     }
 
     // chuyển đường dẫn file ảnh bài hát về ảnh
@@ -244,18 +243,18 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_play: {              // click button play/pause ở thông tin vắn tắt bài hát
-                if (mMusicService.getMedia().isStatusPlay()) {
-                    mMusicService.getMedia().pauseSong();
-                    mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
+                if (mMusicService.isStatusPlay()) {
+                    mMusicService.pauseSong();
+                    mBtnPlay.setBackgroundResource(R.drawable.ic_black_play);
 
                 } else {
-                    mMusicService.getMedia().resumeSong();
-                    mBtnPlay.setBackgroundResource(R.drawable.ic_black_play);
+                    mMusicService.resumeSong();
+                    mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
                 }
                 break;
             }
             case R.id.bottom_relativeLayout: {                  // click thông tin vắn tắt bài hát show đến giao diện mediaPlaybackFragment
-                mPosCurrent = mMusicService.getMedia().getmCurrentPlay();
+                mPosCurrent = mMusicService.getmCurrentPlay();
                 Log.d("LanNTp", "onClick: "+mPosCurrent);
                 SongItem mSongItem = mSongItems.get(mPosCurrent);
                 FragmentManager fragmentManager = getFragmentManager();
@@ -290,8 +289,8 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
             mSongItems.get(pos).setmIsPlay(true);
 
             if (mMusicService != null) {
-                mMusicService.getMedia().playSong(songItem.getmSongImg());
-                mMusicService.getMedia().setmCurrentPlay(pos);
+                mMusicService.playSong(songItem.getmSongImg());
+                mMusicService.setmCurrentPlay(pos);
             }
             mBtnPlay.setBackgroundResource(R.drawable.ic_black_pause);
 
@@ -304,22 +303,35 @@ public class AllSongsFragment extends Fragment implements View.OnClickListener, 
                     .into(mSongImg);
 
         } else { //khi ngang
+            TextView mSongNameMedia = getActivity().findViewById(R.id.TV_songName_media);
+            TextView mSongAuthorMedia = getActivity().findViewById(R.id.TV_song_author_media); //ánh xạ bên media
+            ImageView mImgMedia = getActivity().findViewById(R.id.ImgV_Media);
+            ImageView mBackground = getActivity().findViewById(R.id.img_background);
+
+            for (int i = 0; i < mSongItems.size(); i++) {
+                mSongItems.get(i).setmIsPlay(false);
+            }
+            mSongItems.get(pos).setmIsPlay(true);
 
             if (mMusicService != null) {
-                mMusicService.getMedia().setmCurrentPlay(pos);
-                mMusicService.getMedia().playSong(songItem.getmSongImg());       //play nhac
+                mMusicService.setmCurrentPlay(pos);
+                mMusicService.playSong(songItem.getmSongImg());       //play nhac
             }
             mLlBottom.setVisibility(View.GONE);
             mViewBottom.setVisibility(View.GONE);
-            mSongName.setText(songItem.getmSongName());
-            mSongAuthor.setText(songItem.getmSongAuthor());
+            mSongNameMedia.setText(songItem.getmSongName());
+            mSongAuthorMedia.setText(songItem.getmSongAuthor());
             byte[] songImg = getAlbumImg(mSongItems.get(pos).getmSongImg());
             Glide.with(getContext()).asBitmap()
-                    .error(R.drawable.backgroundmusic)
                     .load(songImg)
-                    .into(mSongImg);
+                    .error(R.drawable.backgroundmusic)
+                    .into(mImgMedia);
+            Glide.with(getContext()).asBitmap()
+                    .load(songImg)
+                    .error(R.drawable.backgroundmusic)
+                    .into(mBackground);
         }
-        mPosCurrent = pos;
+        //mPosCurrent = pos;
 
     }
 
