@@ -72,6 +72,7 @@ public class MediaPlaybackService extends Service {
 
     public void setmCurrentPlay(int mCurrentPlay) {
         this.mCurrentPlay = mCurrentPlay;
+        Log.d("LanNTp", "setmCurrentPlay: "+mCurrentPlay);
     }
 
     public ArrayList<SongItem> getDataMusic() {
@@ -96,8 +97,8 @@ public class MediaPlaybackService extends Service {
 
 
     public int getCurrentPositionPlay() {
-        sharedPreferencesCurrent = mContext.getSharedPreferences("DATA_CURRENT_PLAY", Context.MODE_PRIVATE);
-        int position = sharedPreferencesCurrent.getInt("DATA_CURRENT_STREAM_POSITION", 0);
+      //  sharedPreferencesCurrent = mContext.getSharedPreferences("DATA_CURRENT_PLAY", Context.MODE_PRIVATE);
+       // int position = sharedPreferencesCurrent.getInt("DATA_CURRENT_STREAM_POSITION", 0);
         return mMediaPlayer.getCurrentPosition();        //trả về vtri đang phát
 
     }
@@ -181,6 +182,7 @@ public class MediaPlaybackService extends Service {
             pos = 0;
         }
         mCurrentPlay = pos;
+        playSong(mSongItems.get(pos).getmSongImg());
     }
 
     public void previousSong(int pos) {
@@ -189,6 +191,7 @@ public class MediaPlaybackService extends Service {
             pos = mSongItems.size() - 1;
         }
         mCurrentPlay = pos;
+        playSong(mSongItems.get(pos).getmSongImg());
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {

@@ -2,9 +2,12 @@ package com.example.activitymusic.adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -13,16 +16,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.activitymusic.MainActivity;
 import com.example.activitymusic.R;
 import com.example.activitymusic.interfaces.IIClickItems;
 import com.example.activitymusic.model.SongItem;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
 
 //import eu.gsottbauer.equalizerview.EqualizerView;
 
-public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHolder> {
+public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHolder> implements Filterable {
     private ArrayList<SongItem> mSongItems;
+    private ArrayList<SongItem> mListSongItems;
     private Context mContext;                       // khai báo biến
     private IIClickItems mIiClickItems;
 
@@ -30,7 +37,8 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
         this.mSongItems = mSongItems;
         this.mContext = mContext;                                //khởi tạo biến
         this.mIiClickItems = mIiClickItems;
-
+          mListSongItems =new ArrayList<SongItem>();
+          mListSongItems.addAll(mSongItems);
     }
 
 
@@ -69,6 +77,39 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
         return minutes + ":" + seconds;
     }
 
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            LinkedList<SongItem> filteredList = new LinkedList<>();
+
+            if (constraint.toString().isEmpty()) {
+                filteredList.addAll(mListSongItems);
+            } else {
+                for (SongItem songName : mListSongItems) {
+                    if (songName.getmSongName().toLowerCase().contains(constraint.toString().toLowerCase().trim())) {
+                        filteredList.addLast(songName);
+                    }
+                }
+            }
+
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filteredList;
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            mSongItems.clear();
+            mSongItems.addAll((Collection<? extends SongItem>) results.values);
+            notifyDataSetChanged();
+        }
+    };
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView mSongName;
         private TextView mSongTime;
@@ -76,7 +117,7 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
         private ImageView mImageID;
         private ImageButton mSelectSong;
         private RelativeLayout mLayoutClick;
-       // private EqualizerView mEqualizer;
+        // private EqualizerView mEqualizer;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -93,17 +134,14 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
             mSongID.setText(String.valueOf(pos + 1));
             mSongName.setText(songItem.getmSongName() + "");
             mSongTime.setText(getDuration(songItem.getmSongTime()));
-
-            if(songItem.ismIsPlay())
-            {
+            Log.d("LanNTp", "binData: "+songItem.ismIsPlay());
+            if (songItem.ismIsPlay()) {
                 mSongID.setVisibility(View.INVISIBLE);
                 mImageID.setVisibility(View.VISIBLE);                                 // set item về chữ đậm, có đổi stt thành icon chơi nhạc
                 //mEqualizer.animateBars();
                 mSongName.setTypeface(null, Typeface.BOLD);
-            }
-            else
-            {
-               // mEqualizer.stopBars();
+            } else {
+                // mEqualizer.stopBars();
                 mSongID.setVisibility(View.VISIBLE);
                 mImageID.setVisibility(View.INVISIBLE);                           // set item về stt,chữ thường,
                 mSongName.setTypeface(null, Typeface.NORMAL);
@@ -112,14 +150,17 @@ public class SongItemAdapter extends RecyclerView.Adapter<SongItemAdapter.ViewHo
             mLayoutClick.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mIiClickItems.onItemClick(songItem,pos);                   //click item bài hát show ra thông tin vắn tắt bài hát đang phát
+                    mIiClickItems.onItemClick(songItem, pos);
+//                    mSongID.setVisibility(View.INVISIBLE);
+//                    mImageID.setVisibility(View.VISIBLE);
+                    //click item bài hát show ra thông tin vắn tắt bài hát đang phát
                 }
             });
             mSelectSong.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (mIiClickItems != null) {
-                        mIiClickItems.onSongBtnClickListener(mSelectSong, view, songItem , pos);    // click dấu ... của bài hát
+                        mIiClickItems.onSongBtnClickListener(mSelectSong, view, songItem, pos);    // click dấu ... của bài hát
                     }
                 }
             });

@@ -1726,6 +1726,7 @@ drawable ic_black_like
 drawable ic_black_pause
 drawable ic_black_play
 drawable ic_clock_black_24dp
+drawable ic_drawer_recent
 drawable ic_fab_pause
 drawable ic_fab_play
 drawable ic_keyboard_black_24dp
@@ -2090,6 +2091,12 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_help_feedback
+id nav_listen
+id nav_recent
+id nav_setting
+id nav_slideshow
+id nav_view
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
@@ -2429,6 +2436,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu drawer_navigation
 menu menu_search
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -2475,6 +2483,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string favorite_text
 string hello_blank_fragment
+string help
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description

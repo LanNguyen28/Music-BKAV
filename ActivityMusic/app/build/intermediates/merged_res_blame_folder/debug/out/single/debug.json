@@ -92,6 +92,10 @@
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout/app_bar_main.xml"
     },
     {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/menu_drawer_navigation.xml.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/menu/drawer_navigation.xml"
+    },
+    {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable/ic_launcher_background.xml"
     },
@@ -210,6 +214,10 @@
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/layout-land_content_main.xml.flat",
         "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/layout-land/content_main.xml"
+    },
+    {
+        "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_drawer_recent.png.flat",
+        "source": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/src/main/res/drawable-xhdpi/ic_drawer_recent.png"
     },
     {
         "merged": "/home/lanntp/Desktop/Project/Svtt/ActivityMusic/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",

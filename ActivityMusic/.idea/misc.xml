@@ -36,7 +36,8 @@
         <entry key="app/src/main/res/layout/fragment_all_songs.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_media_playback.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/item_song.xml" value="0.21422101449275363" />
-        <entry key="app/src/main/res/layout/navigation_layout.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/navigation_layout.xml" value="0.2782608695652174" />
+        <entry key="app/src/main/res/menu/drawer_navigation.xml" value="0.11018518518518519" />
         <entry key="app/src/main/res/menu/menu_search.xml" value="0.35572916666666665" />
       </map>
     </option>
